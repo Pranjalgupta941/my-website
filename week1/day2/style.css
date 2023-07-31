@@ -1,0 +1,64 @@
+body{
+  background-color: rgb(2, 207, 2);
+  padding: 10px 100px 20px;
+}
+header{
+  margin: 20px 50px 30px;
+}
+ul{
+  border: solid;
+  background-color: whitesmoke;
+  height: 30px;
+  border-radius: 10px 10px 0px 0px;
+}
+ul li{
+  display: inline;
+  padding: 20px;
+  font-size: 20px;
+}
+nav{
+  display: inline;
+}
+img
+{
+  width: 1250px;
+  height: 500px;
+}
+.para1{
+  width:700px;
+  height: 500px;
+  background-color: white;
+  float: left;
+}
+.para2{
+  float: right;
+  background-color: grey;
+  width: 546px;
+  
+}
+.para{
+  margin-top: 530px;
+  height: 300px;
+  background-color: white;
+  padding: 20px  20px;
+  display: flex;
+  padding: 20px 20px 20px;
+}
+.p1{
+  border: solid;
+  width: 400px;
+  height: 300px;
+  margin:0px 10px 0px;
+}
+.p2{
+  border: solid;
+  width: 400px;
+  height: 300px;
+  margin:0px 10px 0px;
+}
+.p3{
+  border: solid;
+  width: 400px;
+  height: 300px;
+  margin:0px 10px 0px;
+}

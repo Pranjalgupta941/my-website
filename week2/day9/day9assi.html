@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container-fluid">
+          <!-- <img src="/img1/Screenshot crc.png " style="height: 100px; width: 150px;" alt=""> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="position: relative; color: #009688;">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+              <li class="nav-item ">
+                <a class="nav-link active" aria-current="page" href="/vscode.html"
+                  style="text-decoration: black;"><I>Home</I></a>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link active" class="btn btn-outline-danger" href="/About/about.html"><I>About</I></a>
+              </li>
+    
+              <li class="nav-item ">
+                <a class="nav-link active" href="#"><i>Contact</i></a>
+              </li>
+    
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+        <table class="table table-dark table-striped" id="mytable">
+            <tr>
+                <th id="name">name</th>
+                <th id="age"> age</th>
+            </tr>
+        </table>
+        <button type="add item" onclick="data()" class="btn btn-primary"><b>Add item</b></button>
+        <button type="add item" onclick="Ages('below20')" class="btn btn-primary ms-5 me-5"><b>less than20</b></button>
+        <button type="add item" onclick="Ages('20to24')" class="btn btn-primary"><b>above age 20</b></button>
+        <button type="add item" onclick="Ages('above24')" class="btn btn-primary"><b>above age 50</b></button>
+        <script>
+            let s1={
+                name:"pranjal",
+                age:20,
+            }
+            let s2={
+                name:"sachin",
+                age:23,
+            }
+            let s3={
+                name:"naman",
+                age:20,
+            }
+            let s4={
+                name:"abhay",
+                age:12,
+            }
+            let s5={
+                name:"jaisal",
+                age:20,
+            }
+            let s6={
+                name:"saurab",
+                age:20,
+            }
+            let s7={
+                name:"mangal",
+                age:20,
+            }
+            let s8={
+                name:"dubey",
+                age:20,
+            }
+            let s9={
+                name:"sala",
+                age:28,
+            }
+            let s10={
+                name:"megha",
+                age:22,
+            }
+            let s11={
+                name:"mansi",
+                age:26,
+            }
+            let s12={
+                name:"harshit",
+                age:23,
+            }
+            let s13={
+                name:"pranav",
+                age:18,
+            }
+            let s14={
+                name:"mradu;",
+                age:15,
+            }
+            let s15={
+                name:"yug",
+                age:10,
+            }
+            let s16={
+                name:"tera",
+                age:34,
+            }
+            let s17={
+                name:"achaa",
+                age:67,
+            }
+            let s18={
+                name:"thik",
+                age:87,
+            }
+            let s19={
+                name:"bye",
+                age:45,
+            }
+            let s20={
+                name:"chalo",
+                age:55,
+            }
+            let arr = [s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s15,s16,s17,s18,s19,s20];
+            function data(){
+            var table = document.getElementById("mytable");
+            if (table.rows.length == 1){
+                
+                for(var i=0;i < arr.length;i++){
+                    var row = table.insertRow(-1);
+
+                    var cell1 = row.insertCell(0);
+                    cell1.innerHTML = arr[i].name;
+
+                    var cell2 = row.insertCell(1);
+                    cell2.innerHTML = arr[i].age;
+
+                }
+            }
+        }
+        function Ages(input) {
+            var table = document.getElementById("mytable");
+            var rows = table.getElementsByTagName("tr");
+
+            for (var i = 1; i < rows.length; i++) {
+                var cell2 = rows[i].getElementsByTagName("td")[1];
+                var age = parseInt(cell2.innerHTML);
+
+                if (input === 'below20' && age < 20) {
+                    rows[i].style.display = "";
+                } else if (input === '20to24' && age >= 20 && age <= 24) {
+                    rows[i].style.display = "";
+                } else if (input === 'above24' && age > 24) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+        </script>
+    </div>
+    <footer style="background-color: #de1009;">
+        <div class="text-center text-white p-3" >
+          © 2023 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/"><b>Pranjal Gupta</b></a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <script src="https://kit.fontawesome.com/62fe7307a7.js" crossorigin="anonymous"></script>
+</body>
+</html>

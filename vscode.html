@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"crossorigin="anonymous"></script>
+        <style>
+        
+        </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container-fluid">
+          <img src="/img1/Screenshot crc.png " style="height: 100px; width: 150px;" alt="">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="position: relative; color: #009688;">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+              <li class="nav-item ">
+                <a class="nav-link active" aria-current="page" href="#" style="text-decoration: black;"><I>Home</I></a>
+              </li>
+
+              <li class="nav-item" >
+                <a class="nav-link active" class="btn btn-outline-danger" href="/About/about.html" style="text-decoration: double;"><I>About</I></a>
+              </li>
+              
+              <li class="nav-item ">
+                <a class="nav-link active" href="/contact/contact.html"><i>Contact</i></a>
+              </li>
+              <div class="dropdown">
+                <a class="btn btn-outline-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i>Project</i>
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#week1">week1</a></li>
+                  <li><a class="dropdown-item" href="#week2">week2</a></li>
+                  <li><a class="dropdown-item" href="#week3">week3</a></li>
+                </ul>
+              </div>
+             
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+        <div class="mx-2">
+            <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#loginModalLabel">login</button>
+            <button class="btn btn-outline-success"data-bs-toggle="modal" data-bs-target="#sign-inModalLabel">sign-in</button>
+        </div> 
+         </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Modal -->
+      <!-- login model -->
+  <div class="modal fade" id="loginModalLabel" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="loginModalLabel">login</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- signin model -->
+  <div class="modal fade" id="sign-inModalLabel" tabindex="-1" aria-labelledby="sign-inModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="sign-inModalLabel">sign-in page</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="Email1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="Password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="Password">
+                </div>
+                <div class="mb-3">
+                    <label for="Password2" class="form-label">Re enter password</label>
+                    <input type="password" class="form-control" id="Password2" onchange="vali()">
+                    <label id="err"></label>
+                  </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+          <script>
+            function vali(){
+                let Password = document.getElementById("Password");
+                let Password2 = document.getElementById("Password2");
+                if (pass.value != repass.value){
+                    document.getElementById("err").innerHTML = "enter same password";
+                    document.getElementById("err").style.color = "red";
+                    pass.vaule ="";
+                    repass.value ="";
+                   } else{
+                    document.getElementById("err").innerHTML = "valid";
+                    document.getElementById("err").style.color ="green";
+                   }
+    
+            }
+        </script>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+      <!-- carosol slide -->
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/img1/c2.webp" class="d-block w-100"  height="500px" width="100px">
+            
+          </div>
+          <div class="carousel-item">
+            <img src="/img1/c1.webp" class="d-block w-100"  height="500px" width="100px">
+          </div>
+          <div class="carousel-item">
+            <img src="/img1/c3.jpg" class="d-block w-100"  height="500px" width="100px">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+             <!-- cards -->
+             <div class="mt-2 bg-danger" id="week1"> 
+                <h1 style="color: black; " class="text-center"><b><i>Week1</i></b></h1>
+                <div class="row ">
+                    <div class="col-md-4">
+              <div class="card" >
+                <img src="/week1/day 4/thik h/img/day1.jpg" class="card-img-top" alt="..." style="height: 175px;">
+                <div class="card-body">
+                  <h5 class="card-title"style="text-decoration: underline;"><b><i>Time Table</i></b></h5>
+                  <a href="/week1/time table/time table.html" class="btn btn-primary">click here</a>
+                </div>
+              </div>
+              </div>
+
+              <div class="col-md-4">
+              <div class="card" >
+                <img src="/week1/day 4/thik h/img/day2.jpg" class="card-img-top" alt="..." height="175px">
+                <div class="card-body">
+                  <h5 class="card-title"style="text-decoration: underline;"></h5>
+                  
+                  <a href="#" class="btn btn-primary"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" >
+                  <img src="/week1/day 4/thik h/img/day3.jpg" class="card-img-top" alt="..." height="175px">
+                  <div class="card-body">
+                    <h5 class="card-title"style="text-decoration: underline;"><i><b>Bootsrap Site</b></i></h5>
+                    
+                    <a href="/week1/day3/site.html" class="btn btn-primary">click here</a>
+                  </div>
+                </div>
+              </div>
+              </div>
+              
+
+              <div class="row ">
+              <div class="col-md-4">
+                <div class="card" >
+                  <img src="/img1/c4.jpg" class="card-img-top" alt="..." height="175px">
+                  <div class="card-body">
+                    <h5 class="card-title"style="text-decoration: underline;"><i><b>Coulmn Making</b></i></h5>
+                    
+                    <a href="/week1/day4/coulmn making.html" class="btn btn-primary">click here</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card" >
+                  <img src="/img1/c5.jpg" class="card-img-top" alt="..." height="175px">
+                  <div class="card-body">
+                    <h5 class="card-title"style="text-decoration: underline;"><i><b>Bootsrap Web Page</b></i></h5>
+                    
+                    <a href="/week1/day 4/thik h/webpage.html" class="btn btn-primary">click here</a>
+                  </div>
+                </div>
+            </div>
+                <div class="col-md-4">
+                    <div class="card" >
+                      <img src="/img1/c6.jpg" class="card-img-top" alt="..." height="175px">
+                      <div class="card-body">
+                        <h5 class="card-title"style="text-decoration: underline;"><i><b>My Gallery</b></i></h5>
+                        
+                        <a href="/week1/day5/demo2.html" class="btn btn-primary">click here</a>
+                      </div>
+                    </div>
+              </div>
+            </div>
+
+            </div>
+            
+            <div class="mt-2 bg-danger" id="week2"> 
+                <h1 style="color: black;" class="text-center"><B><I>Week2</I></B></h1>
+                <div class="row mt-3">
+                    <div class="col-md-4">
+              <div class="card" >
+                <img src="/week1/day 4/thik h/img/day1.jpg" class="card-img-top" alt="..." style="height: 175px;">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-decoration: underline;"><i><b> Agree Button</b></i></h5>
+                  
+                  <a href="/week2/Day-6- task/Task.html" class="btn btn-primary">click here</a>
+                </div>
+              </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card" >
+                  <img src="/week1/day 4/thik h/img/day2.jpg" class="card-img-top" alt="..." height="175px">
+                  <div class="card-body">
+                    <h5 class="card-title"style="text-decoration: underline;"><i><b>Calculator</b></i></h5>
+                    
+                    <a href="/week2/day7/calculater.html" class="btn btn-primary">Click here</a>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card" >
+                  <img src="/week1/day 4/thik h/img/day3.jpg" class="card-img-top" alt="..." height="175px">
+                  <div class="card-body">
+                    <h5 class="card-title"style="text-decoration: underline;"><i><b>Form Making</b></i></h5>
+                    
+                    <a href="/week2/day8/form.html" class="btn btn-primary">Click here</a>
+                  </div>
+                </div>
+            </div>
+            </div>
+            
+            <div class="row mt-3">
+            <div class="col-md-4">
+              <div class="card" >
+                <img src="/img1/c4.jpg" class="card-img-top" alt="..." height="175px">
+                <div class="card-body">
+                  <h5 class="card-title"style="text-decoration: underline;"><i><b> Achievement Table</b></i></h5>
+                  
+                  <a href="/week2/day7/assignment2.html" class="btn btn-primary"></a>
+                </div>
+              </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="card" >
+              <img src="/img1/c5.jpg" class="card-img-top" alt="..." height="175px">
+              <div class="card-body">
+                <h5 class="card-title"style="text-decoration: underline;"><i><b></b>Fliter Table</i></h5>
+                
+                <a href="/week2/day9/day9assi.html" class="btn btn-primary">Click here</a>
+              </div>
+            </div>
+        </div>
+        
+
+        <div class="col-md-4">
+          <div class="card" >
+            <img src="/img1/c6.jpg" class="card-img-top" alt="..." height="175px">
+            <div class="card-body">
+              <h5 class="card-title"style="text-decoration: underline;"><i><b></b></i></h5>
+              
+              <a href="" class="btn btn-primary">Click here</a>
+            </div>
+          </div>
+      </div>
+      </div>
+        </div>
+         <!-- week3 -->
+         <div class="mt-2 bg-danger" id="week3"> 
+          <h1 style="color: black;" class="text-center"><B><I>Week3</I></B></h1>
+          <div class="row mt-3">
+              <div class="col-md-4">
+        <div class="card" >
+          <img src="/week1/day 4/thik h/img/day1.jpg" class="card-img-top" alt="..." style="height: 175px;">
+          <div class="card-body">
+            <h5 class="card-title" style="text-decoration: underline;"><i><b> Table Form</b></i></h5>
+            <a href="/week3/day 10/table.html" class="btn btn-primary">click here</a>
+          </div>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card" >
+            <img src="/week1/day 4/thik h/img/day2.jpg" class="card-img-top" alt="..." style="height: 175px;">
+            <div class="card-body">
+              <h5 class="card-title" style="text-decoration: underline;"><i><b> Bill Making</b></i></h5>
+              <a href="/week3/day11/day9task.html" class="btn btn-primary">click here</a>
+            </div>
+          </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card" >
+              <img src="/week1/day 4/thik h/img/day3.jpg" class="card-img-top" alt="..." style="height: 175px;">
+              <div class="card-body">
+                <h5 class="card-title" style="text-decoration: underline;"><i><b>Login Page</b></i></h5>
+                <a href="/week3/day12/loginpage.html" class="btn btn-primary">click here</a>
+              </div>
+            </div>
+            </div>
+              
+            <div class="row mt-3"></div>
+            <div class="col-md-4">
+              <div class="card" >
+                <img src="/img1/c4.jpg" class="card-img-top" alt="..." style="height: 175px;">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-decoration: underline;"><i><b>Login Page</b></i></h5>
+                  <a href="/week3/day13/form1.html" class="btn btn-primary">click here</a>
+                </div>
+              </div>
+            </div>
+         </div>
+        </div>
+
+
+               <!-- footer -->
+    <footer style="background-color:rgba(91, 86, 86, 0.612);">
+      <div class="text-center text-danger p-3" >
+        © 2023 Copyright:
+        <a class="text-danger" href="https://mdbootstrap.com/"><b>Pranjal Gupta</b></a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+              
+
+</body>
+</html>

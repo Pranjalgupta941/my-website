@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container-fluid">
+      <img src="/img1/Screenshot crc.png " style="height: 100px; width: 150px;" alt="">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="position: relative; color: #009688;">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+          <li class="nav-item ">
+            <a class="nav-link active" aria-current="page" href="#" style="text-decoration: black;"><I>Home</I></a>
+          </li>
+
+          <li class="nav-item" >
+            <a class="nav-link active" class="btn btn-outline-danger" href="#"><I>About</I></a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link active" href="#"><i>Contact</i></a>
+          </li>
+          <div class="dropdown">
+            <a class="btn btn-outline-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              <i>Project</i>
+            </a>
+          
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#week1">week1</a></li>
+              <li><a class="dropdown-item" href="#week2">week2</a></li>
+              <li><a class="dropdown-item" href="#week3">week3</a></li>
+            </ul>
+          </div>
+         
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+    </form>
+    <div class="mx-2">
+        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#loginModalLabel">login</button>
+        <button class="btn btn-outline-success"data-bs-toggle="modal" data-bs-target="#sign-inModalLabel">sign-in</button>
+    </div> 
+     </div>
+      </div>
+    </div>
+  </nav>
+    <div class="container">
+
+        <table class="table table-dark table-striped">
+            <tr>
+                <td>Item</td>
+                <td>Item-id</td>
+                <td>Item</td>
+                <td>Item-id</td>
+                <td>Item</td>
+                <td>Item-id</td>
+                
+            </tr>
+            <tr>
+            <td>Apple</td>
+            <td>ap1</td>
+            <td>Banana</td>
+            <td>ba1</td>
+            <td>Mango</td>
+            <td>ma1</td>
+            </tr>
+            <tr>
+                <td>Orange</td>
+                <td>or1</td>
+                <td>Litchi</td>
+                <td>li1</td>
+                <td>Potato</td>
+                <td>pa1</td>
+            </tr>
+    
+                <tr>
+                    <td>tomato</td>
+                    <td>to1</td>
+                    <td>Lady Finger</td>
+                    <td>la1</td>
+                    <td>Onion</td>
+                    <td>on1</td>
+                </tr>
+        </table>
+        <br>
+        <div class="mb-3">
+            <label for="Item-Id" class="form-label">Item-Id</label>
+            <input type="text" class="form-control" id="Item-Id" placeholder="id">
+        </div>
+          <br>
+        <div class="mb-3">
+            <label for="qty" class="form-label">Qty</label>
+            <input type="text" class="form-control" id="qty" placeholder="Quantity">
+        </div>
+        <div class="row justify-content-center mb-5">
+            <div class="col-2">
+                <button type="button" class="btn btn-primary" onclick="add()">Add</button>
+            </div>
+                 
+
+        </div> 
+
+        <!-- <h2 class="text-center text -info text-uppercase">Billing</h2> -->
+        <h2 class="text-center text"><b>Billing</b></h2>
+        <table class ="table table-bordered border-primary mt-4" id="table">
+            <tr>
+                <th>#</th>
+                <th>Item-id</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </table>
+        <div>
+            <p id="display"></p>
+        </div>
+    </div>
+    <script>
+        let priceTable={
+            ap1:100,
+            ba1:60,
+            ma1:103,
+            or1:54,
+            li1:60,
+            pa1:30,
+            to1:260,
+            la1:25,
+            on1:35,
+        };
+        
+    //     function add(){
+    //     //window.alert("gffhfjf");
+    //     var item = document.getElementById("Item-Id").value;
+    //     var qty=document.getElementById("qty").value;
+    //     var priceL = qty*price[item];
+    //     var display =document.getElementById("display");
+    //     display.innerHTML= item + " "+  qty  +" "+ priceL;
+    //    }
+    var Totalprice=0;
+        function add() {
+        var item= document.getElementById("Item-Id").value;
+        var qty= document.getElementById("qty").value;
+        if(item!="" || qty!=""){
+        var price= qty * priceTable[item];
+        Totalprice +=price;
+        var display= document.getElementById("display");
+        display.innerHTML=" Your Total Amount---" +Totalprice;
+        var table = document.getElementById("table");
+              var row = table.insertRow(-1);
+              var cell1 = row.insertCell(0);
+              var cell2 = row.insertCell(1);
+              var cell3 = row.insertCell(2);
+              var cell4 = row.insertCell(3);
+              cell1.innerHTML=(table.rows.length)-1;
+              cell2.innerHTML = document.getElementById("Item-Id").value;
+              cell3.innerHTML = document.getElementById("qty").value;
+              cell4.innerHTML = qty * priceTable[item];;
+              document.getElementById("Item-Id").value="";
+              document.getElementById("qty").value="";
+        }
+    }
+    </script>
+     <!-- footer -->
+     <footer style="background-color: #de1009;">
+      <div class="text-center text-white p-3" >
+        © 2023 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/"><b>Pranjal Gupta</b></a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+</body>
+</html>

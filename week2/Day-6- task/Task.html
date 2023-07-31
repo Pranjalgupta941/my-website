@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day-6-Task</title>
+    <style>
+       
+        .container {
+            margin: 150px auto;
+            padding: 20px;
+            border: 3px solid #1bbc33;
+            text-align: center;
+            background-color: aqua;
+        }
+        #agree{
+            margin-right: 100px;
+            background-color:#4CAF50;;
+            
+        }
+        #agree:hover{
+            background-color: rgb(216, 226, 13);
+
+        }
+        #disagree{
+            background-color: #f44336;
+            
+        }
+        #disagree:hover{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container-fluid">
+          <!-- <img src="/img1/Screenshot crc.png " style="height: 100px; width: 150px;" alt=""> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="position: relative; color: #009688;">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+              <li class="nav-item ">
+                <a class="nav-link active" aria-current="page" href="/vscode.html"
+                  style="text-decoration: black;"><I>Home</I></a>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link active" class="btn btn-outline-danger" href="/About/about.html"><I>About</I></a>
+              </li>
+    
+              <li class="nav-item ">
+                <a class="nav-link active" href="#"><i>Contact</i></a>
+              </li>
+    
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+        <div style="background-color: rgb(74, 200, 143);"> 
+            <h1 id="h1">Welcome</h1>
+        </div>
+        
+        <div>
+            <label for="name"><b>Name :</b></label>
+            <input type="text" id="name" placeholder="Enter your name"><br><br>
+            <label for="age"><b>Age :</b></label>
+            <input type="number" id="age" placeholder="Enter your age"><br><br>
+            <button onclick="Agree()" id="agree">Agree</button>
+            <button onclick="Disagree()" id="disagree">Disagree</button>
+        </div>
+        <div id="result">
+              <h2 id="name_h2"></h2>
+              <h2 id="age_h2"></h2>
+        </div>
+                     
+
+</div>
+    <script>
+        function Agree() {
+            document.getElementById("result").style.border = " 2px solid blue";
+            document.getElementById("result").style.marginTop = "50px";
+            let name = document.getElementById('name').value;
+            let age= document.getElementById('age').value;
+            document.getElementById('name_h2').innerHTML = "Welcome Mr./Mrs. " + name;
+            document.getElementById('age_h2').innerHTML = "You are " + age + " years old.";
+        }
+
+        function Disagree(){
+            document.getElementById('name').value="";
+            document.getElementById('age').value="";
+        }
+
+    </script>
+
+<footer style="background-color: #de1009;">
+    <div class="text-center text-white p-3" >
+      © 2023 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/"><b>Pranjal Gupta</b></a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <script src="https://kit.fontawesome.com/62fe7307a7.js" crossorigin="anonymous"></script>
+</body>
+</html>

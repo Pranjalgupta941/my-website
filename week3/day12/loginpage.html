@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    
+</head>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container-fluid">
+          <img src="/img1/Screenshot crc.png " style="height: 100px; width: 150px;" alt="">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="position: relative; color: #009688;">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+              <li class="nav-item ">
+                <a class="nav-link active" aria-current="page" href="#" style="text-decoration: black;"><I>Home</I></a>
+              </li>
+    
+              <li class="nav-item" >
+                <a class="nav-link active" class="btn btn-outline-danger" href="#"><I>About</I></a>
+              </li>
+              
+              <li class="nav-item ">
+                <a class="nav-link active" href="#"><i>Contact</i></a>
+              </li>
+              <div class="dropdown">
+                <a class="btn btn-outline-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i>Project</i>
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#week1">week1</a></li>
+                  <li><a class="dropdown-item" href="#week2">week2</a></li>
+                  <li><a class="dropdown-item" href="#week3">week3</a></li>
+                </ul>
+              </div>
+             
+            </ul>
+            
+        
+         </div>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container">
+    <h1 style="text-align: center; background-color: rgb(142, 171, 54);"><b>Login</b></h1>
+    <div class="mb-3">
+    <label for="userid" class="form-label" ><b>userid</b></label>
+    <input type="text" class="form-control" id="userid" placeholder="userid">
+  </div>
+  <div class="mb-3">
+    <label for="Password" class="form-label"><b>Password</b></label>
+    <input type="password" class="form-control" id="Password"placeholder="Password">
+  </div>
+  <div style="text-align: center;">
+    <button type="signin" class="btn btn-outline-success" onclick=signin()><b>signin</b></button>
+    <button type="reset" class="btn btn-outline-success" onclick=reset()><b>Reset</b></button>
+  </div>
+</div>
+<script>
+    let arr1=[
+        {userid:"pranjal",password:"111"},
+        {userid:"sachin",password:"222"},
+        {userid:"ram",password:"333"},
+        {userid:"shyam",password:"444"},
+    ];
+    function signin(){
+       
+        var user =document.getElementById("userid").value;
+        var pass=document.getElementById("Password").value;
+        for(let obj of arr1){
+            if(obj["userid"]===user && obj["password"]===pass){
+                window.alert(`Welcome ${user}`);
+                break;
+            }
+            else{
+                alert('Invalid userid or Password');
+                break;
+            }
+
+        }
+    }
+
+</script>
+ <!-- footer -->
+ <footer style="background-color: #de1009;">
+    <div class="text-center text-white p-3" >
+      © 2023 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/"><b>Pranjal Gupta</b></a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</body>
+</html>
